@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <body>
+
+    </body>
+   <script>
+      // var url = "https://a.yirui.cf/youdao/jsonapi_s?doctype=json&jsonversion=4&q=name&le=en&t=1&client=web&sign=47864df9e11fad2997311c157f7ddece&keyfrom=webdict/"
+      var url = "https://a.yirui.cf/youdao/jsonapi_s?doctype=json&q=describe&le=en";
+   // var url = "https://a.yirui.cf/youdao";
+      //var url = "https://youdao.com";
+      //var url = "http://119.23.109.199:8080/youdao?q=describe&le=en"
+    // var url = "http://127.0.0.1:8080/youdao?q=describe&le=en"
+        function success(data) {
+  //var data = JSON.parse(this.responseText)
+
+  console.log(this.responseText)
+}
+
+function error (err) {
+  console.log('Error Occurred:', err)
+}
+
+var xhr = new XMLHttpRequest()
+xhr.onload = success
+xhr.onerror = error
+xhr.open("GET", url);
+xhr.send();
+    </script>
+</html>

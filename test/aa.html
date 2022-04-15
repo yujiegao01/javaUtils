@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+  
+
+</head>
+
+
+<script>
+    //word = '{{word}}';
+word = "school";
+isShowTranslafteF = true;
+styleC = { answerLine: true };
+</script>
+
+
+ 
+<script>
+ 
+Object.defineProperty(styleC, 'answerLine', {
+    get: function() { //取值的时候会触发
+       
+        return answerLine;
+    },
+    set: function(value) { //更新值的时候会触发
+        if(value){
+            document.getElementById("answer").style.display="block"
+        }else{
+            document.getElementById("answer").style.display="none"
+        }
+       
+     
+        answerLine = value;
+      
+    }
+});
+styleC.answerLine = true;
+
+</script>
+<style>
+:root{--sf-img-13: url("data:image/png;base64,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")}
+.phraseSpeech[data-v-b03cbfc6]{display:inline-block;width:22px;height:22px;vertical-align:top;font-size:0;letter-spacing:0}
+.phraseSpeech .pronounce[data-v-b03cbfc6]{display:block;width:100%;height:100%;-webkit-tap-highlight-color:rgba(255,0,0,0)}
+.per-phone span{line-height:1}
+.per-phone{font-weight:500;background:#f4f5f7;padding:9px 10px;border-radius:20px;box-sizing:border-box;margin-bottom:11px}
+.per-phone[data-v-538363dc]{font-size:14px;color:#666;margin-right:20px;display:flex;align-items:center}
+ .phone_con .per-phone .phonetic[data-v-538363dc]{color:#a0a0a0;margin-left:.5em}
+.phone_con{margin:0 auto 20px;
+   flex-wrap:wrap;
+   font-size:14px;color:#666;margin-right:20px;display:flex;align-items:center;
+color:#a0a0a0;margin-left:.5em}
+
+.pronounce[data-v-b03cbfc6]{background:var(--sf-img-13) 50% 50% no-repeat;
+   background-size: contain;}
+</style>
+
+<body>
+ 
+<audio src="" id="audio" autoplay controls style="display: none;"></audio>  
+<div>
+<div class=phone_con data-v-538363dc>
+    <div class=per-phone data-v-538363dc><span data-v-538363dc>英</span><span class=phonetic data-v-538363dc id="symbolY"></span><div class="phraseSpeech phonetic-speech" data-v-b03cbfc6 data-v-538363dc><a title=点击发音 href="#" onclick="getAudio(1)" class=pronounce data-v-b03cbfc6></a></div></div>
+    <div class=per-phone data-v-538363dc><span data-v-538363dc>美</span><span class=phonetic data-v-538363dc id="symbolM"></span><div class="phraseSpeech phonetic-speech" data-v-b03cbfc6 data-v-538363dc><a title=点击发音 href="#" onclick="getAudio(2)" class=pronounce data-v-b03cbfc6></a></div></div>
+</div>
+     <hr id="answer" style="display: none;">
+<div id="translate">
+
+
+</div>
+
+
+</div>
+</body>
+
+<script>
+    
+  
+  var url = "https://a.yirui.cf/youdao/jsonapi_s?doctype=json&q="+word+"&le=en";
+  (function (){
+    function success(data) {
+   wordData = JSON.parse(this.responseText)
+        
+
+}
+
+function error (err) {
+  console.log('Error Occurred:', err)
+}
+
+var xhr = new XMLHttpRequest()
+xhr.onload = success
+xhr.onerror = error
+xhr.open("GET", url,false); 
+xhr.send();
+  })()  
+  
+  onload = function (){
+      init();
+      getAudio(2);
+  }
+
+  function init(){
+    document.getElementById("symbolY").textContent="/ "+wordData.ec.word[0].ukphone+" /"
+    document.getElementById("symbolM").textContent="/ "+wordData.ec.word[0].usphone+" /"
+
+    if(isShowTranslafteF){
+        isShowTranslafte();
+    }
+  }
+function getAudio(flag){ 
+    document.getElementById("audio").setAttribute("src","https://dict.youdao.com/dictvoice?audio="+word+"&type="+flag);
+
+
+}
+
+
+function isShowTranslafte(){
+    var data = wordData.ec.word[0].trs;
+    var divR = document.getElementById("translate");
+    for(var i=0;i<data.length;i++){
+       
+        var div = document.createElement("div");
+        div.textContent = data[i].tr[0].l.i[0]
+        divR.appendChild(div);
+        divR.appendChild(document.createElement("br"));
+        
+
+    }
+}
+
+</script>
+
+</html>

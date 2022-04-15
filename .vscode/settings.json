@@ -1,0 +1,8 @@
+{
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "c:\\gao\\install\\IntelliJ IDEA 2020.1\\lib\\junit-4.12.jar",
+        "c:\\Users\\HumOro\\Desktop\\junit-platform-console-standalone-1.8.2.jar",
+        "c:\\gao\\projest\\libs\\junit-platform-console-standalone-1.8.2.jar"
+    ]
+}
